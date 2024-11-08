@@ -24,7 +24,8 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
+    position: relative;
+    display: inline-block;
 }
 
 nav ul li a {
@@ -38,13 +39,6 @@ nav ul li a:hover {
     background-color: #111;
 }
 
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
 nav ul li ul {
     display: none;
     position: absolute;
@@ -52,14 +46,14 @@ nav ul li ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    z-index: 1;
 }
 
 nav ul li:hover ul {
     display: block;
-}
-
-nav ul li ul li {
-    width: 200px;
 }
 
 nav ul li ul li a {
@@ -71,12 +65,25 @@ nav ul li ul li a:hover {
     background-color: #111;
 }
 
+/* Navegación Fija */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     nav ul {
         display: none;
         flex-direction: column;
         width: 100%;
         background-color: #333;
+    }
+
+    nav ul li {
+        display: block;
     }
 
     nav ul li a {

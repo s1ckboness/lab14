@@ -1,38 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laboratorio 14</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Venta de condimentos</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <header>
-        <h1>
-            Bienvenidos a mi Página Web
-        </h1>
+        <h1>Bienvenidos a mi Página Web</h1>
     </header>
-    
+
     <nav>
         <ul>
             <li><a href="#Inicio">Inicio</a></li>
-            <li><a href="#Acerca">Acerca de</a></li>
-            <li><a href="#Servicios">Servicios</a></li> 
-            <li><a href="#Contacto">Contacto</a></li> 
+            <li><a href="#Productos">Menú</a>
+                <ul>
+                    <li><a href="#Canela">Canela</a></li>
+                    <li><a href="#Clavito">Clavito</a></li>
+                </ul>
+            </li>
+            <li><a href="#Contacto">Contacto</a></li>
             <li><a href="http://www.unilibre.edu.co">Unilibre</a></li>
         </ul>
     </nav>
 
     <main>
-        <section id="Inicio"> <h2>Acá podrás encontrar todos los condimentos que necesites para tus alimentos, pregunte por lo que ve y lo que no ve.</h2> </section>
-        <section id="Acerca"> <h2>Acerca de</h2> <p>Información sobre nuestra empresa y nuestra misión.</p> </section>
-        <section id="Servicios"> <h2>Servicios</h2> <p>Descripción de los servicios que ofrecemos.</p> </section>
-        <section id="Contacto"> <h2>Contáctanos</h2> <p><a href="https://api.whatsapp.com/send?phone=573106125530/">Vía Whatsapp</a></p> <p>Vía Telefónica - 310 6718480</p> </section>
+        <section id="Inicio">
+            <h2>Acá podrás encontrar todos los condimentos que necesites para tus alimentos, pregunte por lo que ve y lo que no ve.</h2>
+        </section>
+
+        <section id="Productos">
+            <h2>Menú de productos</h2>
+            <div class="producto">
+                <h3 id="Canela">Canela</h3>
+                <img src="canela.jpg" width="150" height="150" alt="Canela">
+                <p>La canela es una especia dulce y cálida, 
+                   obtenida de la corteza de árboles. Se utiliza en postres y platos salados, 
+                   y tiene propiedades antioxidantes y antiinflamatorias.</p>
+            </div>
+            <div class="producto">
+                <h3 id="Clavito">Clavito</h3>
+                <img src="clavito.jpg" width="150" height="150" alt="Clavito">
+                <p>El clavito, o clavo de olor, 
+                   es una especia con un sabor fuerte y aroma característico. 
+                   Se usa en guisos y postres, y tiene propiedades antimicrobianas y analgésicas.</p>
+            </div>
+        </section>
+
+        <section id="Tabla">
+            <h2>Lista de productos y precios</h2>
+            <table border="1" cellspacing="0" cellpadding="10">
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                </tr>
+                <tr>
+                    <td>Canela</td>
+                    <td>100g</td>
+                    <td>$5</td>
+                </tr>
+                <tr>
+                    <td>Clavito</td>
+                    <td>50g</td>
+                    <td>$4</td>
+                </tr>
+                <tr>
+                    <td>Anís Estrellado</td>
+                    <td>75g</td>
+                    <td>$6</td>
+                </tr>
+                <tr>
+                    <td>Pimienta de olor</td>
+                    <td>100g</td>
+                    <td>$7</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="Contacto">
+            <h2>Contáctanos</h2>
+            <p><a href="https://api.whatsapp.com/send?phone=573106125530/">Vía Whatsapp</a></p>
+            <p>Vía Telefónica - 310 6718480</p>
+        </section>
     </main>
 
-    <footer> <hr> 
-        <p>&copy; 2024 Mi Página Web, Todos los derechos reservados a Juan Peñuela.</p> 
-        <p>Correo: juandavidpenuelaperez24@gmail.com</p> 
+    <footer>
+        <hr>
+        <p>&copy; 2024 Mi Página Web, Todos los derechos reservados a Juan Peñuela.</p>
+        <p>Correo: juandavidpenuelaperez24@gmail.com</p>
     </footer>
 
+    <section id="FORMULARIO">
+        <div>
+            <h2>FORMULARIO DE REGISTRO</h2>
+            <form>
+                <label>NOMBRE:</label><br>
+                <input type="text" id="NOMBRE" name="NOMBRE" required><br><br>
+                <label>CORREO ELECTRÓNICO:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label>CONTRASEÑA:</label><br>
+                <input type="password" id="contra" name="contraseña" required><br><br>
+                <label>TELÉFONO:</label><br>
+                <input type="tel" name="telefono" minlength="10"><br><br>
+                <label>DIRECCIÓN:</label><br>
+                <input type="text" name="direccion" required><br>
+            </form>
+        </div>
+    </section>
 </body>
 </html>
